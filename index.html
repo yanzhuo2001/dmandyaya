@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>友情网页</title>
+  <!-- 引用外部 CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== 导航栏 ===== -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-logo">友情网页</div>
+      <ul class="nav-links">
+        <li><a onclick="showSection('section1')">欢迎鸭鸭</a></li>
+        <li><a onclick="showSection('section2')">到底谁是鸭鸭</a></li>
+        <li><a onclick="showSection('section3')">我们的回忆</a></li>
+        <li><a onclick="showSection('section4')">线上就是另一个人</a></li>
+        <li><a onclick="showSection('section5')">写点啥</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======== 第一部分：欢迎 ======== -->
+  <section id="section1" class="section-content">
+    <h2>欢迎鸭鸭</h2>
+    <p>冒着可能被你骂死或者打死的风险，我还是决定做这个礼物hhh，毕竟真的挺有意义的。而且至少未来四五年你也不必再担惊受怕了，我也没机会搞这么多你的把柄了bushi。</p>
+    <p>Anyway，学学wcy的三个愿望难度递增的风格，第一是祝鸭鸭未来一切顺利，第二是祝鸭鸭未来多多开心，第三是祝我们的友谊能长久。</p>
+    <p>PS: 叠个甲，如果有些照片真让你感觉很不舒服，你也千万别生气，我真是出于好心的www，而且我也可以发誓从来没有给别人看过，存着就等着这一天（）</p>
+    <button class="primary-btn" onclick="showSection('section2')">开启我们的回忆</button>
+  </section>
+
+  <!-- ======== 第二部分：到底谁是鸭鸭 ======== -->
+  <section id="section2" class="section-content hidden">
+    <h2>请选择你的鸭鸭英雄</h2>
+    <p>先声明下面的按钮有美照和丑照，点开看到什么纯看运气，毕竟人无完人，再漂亮的鸭鸭也得丑一下让我们心里平衡一下。</p>
+
+    <div class="btn-group">
+      <button onclick="openModal('images/yaya/20231231烈焰红唇.JPG', '虽然妆不浓，但确实够妖艳bushi')">烈焰红唇</button>
+      <button onclick="openModal('images/yaya/2024复旦毕业.jpg', '谁家小学生偷穿大学毕业服')">谁家小孩上大学</button>
+      <button onclick="openModal('images/yaya/20231222小狗帽子.JPG', '好可爱的小狗帽子')">鸭鸭还是狗狗</button>
+      <button onclick="openModal('images/yaya/20240204刘海限定.JPG', '还记得当时你问我咋样，我强撑着说还可以xs')">限定版刘海</button>
+      <button onclick="openModal('images/yaya/20240217写真.JPG', '翻了照片这张好像是难得的卷发')">经典拍照嘟嘴</button>
+      <button onclick="openModal('images/yaya/20240710美女你谁.JPG', '最漂亮的一集，谁看了不迷糊')">美女你谁</button>
+      <button onclick="openModal('images/yaya/20241015假装阳光.JPG', '你说你是假装阳光，但真是最灿烂的一张了')">阳光灿烂</button>
+      <button onclick="openModal('images/yaya/吃饭丑照.jpg', '经典表情包')">鸭鸭捂脸</button>
+      <button onclick="openModal('images/yaya/吃饭丑照2.JPG', '那次真是我自助战斗力巅峰了')">不许偷拍</button>
+      <button onclick="openModal('images/yaya/高中运动会.jpg', '这么看次次亚军真就是差点腿长')">小短腿倒腾的很快</button>
+      <button onclick="openModal('images/yaya/绝美海边照.jpg', '个人最喜欢的一张照片，浑然天成的感觉')">绝美背影</button>
+      <button onclick="openModal('images/yaya/绝美眼睛.jpg', '果然挡住下半张脸可以提升颜值/doge')">眼睛会说话</button>
+      <button onclick="openModal('images/yaya/可爱比心.jpg', '和妹妹待在一起的时候自动-15岁')">可爱比心</button>
+      <button onclick="openModal('images/yaya/老师好.jpg', '莫名其妙觉得这张很像温柔的小学老师')">老师好</button>
+      <button onclick="openModal('images/yaya/胖死的证件照.jpg', '这证件照咋都不给你p瘦一点hhh')">珠圆玉润</button>
+      <button onclick="openModal('images/yaya/羞涩模糊自拍.jpg', '原来我们刚认识的时候你是这么害羞的啊')">羞涩女仆</button>
+      <button onclick="openModal('images/yaya/炫耀化妆技术.jpg', '还记得当时你给我炫耀化妆成果，你现在自己看看化的如何哈哈哈哈')">化妆天才</button>
+      <button onclick="openModal('images/yaya/坐车戴口罩.jpg', '挡住下半张脸果然可以提升颜值的梅开二度bushi')">迪士尼公主</button>
+      <button onclick="openModal('images/yaya/这是一个人3？.jpg', '你一票我一票，鸭鸭明天就出道')">歌手出道</button>
+      <button onclick="openModal('images/yaya/这是一个人2？.jpg', '大半夜给写代码的我吓清醒了')">知性学姐</button>
+      <button onclick="openModal('images/yaya/这是一个人？.jpg', '这和别的照片是一个人？？？')">青涩小女孩</button>
+      <button onclick="openModal('images/yaya/双马尾美少女.JPG', '最可爱的一集，果然走可爱风的赵凯雅是无敌的')">双马尾美少女</button>
+    </div>
+  </section>
+
+  <!-- ======== 第三部分：我们的回忆 ======== -->
+  <section id="section3" class="section-content hidden">
+    <h2>一起走过的路</h2>
+    <p>一转眼我们好像也已经熟识四五年了，理照片的时候还讶异我们居然也有这么多回忆了。</p>
+    <p>温馨提醒：点图片可以放大并查看dm的评论</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>高中时期 认真学习的班长</h4>
+        <img src="images/us/高中教室.JPG" alt="高中教室.JPG" width="200"
+             onclick="openModal('images/us/高中教室.JPG','和你一样天天学到21:30，天天不敢找你搭话')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2020年10月4日 一起打羽毛球</h4>
+        <img src="images/us/20201004去打球.jpg" alt="2021004去打球.jpg" width="200"
+             onclick="openModal('images/us/20201004去打球.jpg','当时感觉真的不是很熟，没想到你还会约我出去打球，我真开心了好几天，主要是真没想到你还真会约我出去玩')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2021年4月23日 何梓妍过生日出去玩</h4>
+        <img src="images/us/20210423出去玩.jpg" alt="20210423出去玩.jpg" width="200"
+             onclick="openModal('images/us/20210423出去玩.jpg','当时我和何梓妍说，我想和赵凯雅变熟一点，应该怎么办，她说她故意迟到一会，让我先和你玩，某种程度上来说这还真是第一次线下聊天？')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2021年10月29日 你送了我1000块拼图当生日礼物</h4>
+        <img src="images/us/20211029拼图.jpg" alt="20211029拼图.jpg" width="200"
+             onclick="openModal('images/us/20211029拼图.jpg','我记得你当时还因为我拼的慢嘲笑了我好久，但偷偷告诉你我拼完之后还买了个相框把他裱起来然后挂在家里了')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2022年4月30日 电竞主播赵凯雅上线了</h4>
+        <img src="images/us/20220430电竞主播.jpg" alt="20220430电竞主播.jpg" width="200"
+             onclick="openModal('images/us/20220430电竞主播.jpg','我记得当时你还给我炫耀这个新耳机，也不知道你现在还宠不宠幸它了/doge')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2023年2月8日 出去玩但是在咖啡店打糖豆人</h4>
+        <img src="images/us/20230208出去玩.jpg" alt="20230208出去玩.jpg" width="200"
+             onclick="openModal('images/us/20230208出去玩.jpg','说起来你也是真喜欢打游戏，看照片老拉着我打游戏xs')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2023年2月14日 和最胖鸭鸭回杭二看老师+鸭鸭出国前最后一面</h4>
+        <img src="images/us/20230214最胖赵凯雅.jpg" alt="20230214最胖赵凯雅.jpg" width="200"
+             onclick="openModal('images/us/20230214最胖赵凯雅.jpg','印象里这次见面之后我们一年多没有见面了，我当时都当做诀别来看的（和现在差不多）hhh')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2023年12月23日 元梦之星搭子时期</h4>
+        <img src="images/us/20231223元梦之星.PNG" alt="20231223元梦之星.PNG" width="200"
+             onclick="openModal('images/us/20231223元梦之星.PNG','当时还是你拉着我陪你玩元梦之星，后面你不玩了，我一个人打到了最高段位（）')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2024年2月15日 一整年没见纪念日就送一束花吧</h4>
+        <img src="images/us/20240215送花.JPG" alt="20240215送花.JPG" width="200"
+             onclick="openModal('images/us/20240215送花.JPG','突然发现2023年去看老师那天也是情人节，印象里你在国内的时候，如果我记得的话有些节日会给你送花的，当时这个你还和我说把你妈妈羡慕坏了嘿嘿嘿')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2024年5月14日 时隔一年多终于见面</h4>
+        <img src="images/us/20240514出去玩.JPG" alt="20240514出去玩.JPG" width="200"
+             onclick="openModal('images/us/20240514出去玩.JPG','你是不知道当时因为一年多没见面，我都快激动疯了，又担心你变了又担心我变了，属实是杞人忧天cyz')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2024年6月30日 我们曾在高朋满座中，将隐晦友情说到最尽兴</h4>
+        <img src="images/us/20240630毕业聚餐.JPG" alt="20240630毕业聚餐.JPG" width="200"
+             onclick="openModal('images/us/20240630毕业聚餐.JPG','年轻真好啊，我居然真可以实习+搞毕业聚餐+晚上连夜打顺风车去交大，要是我妈知道肯定会骂我的（）')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2024年7月6日 小学生鸭鸭拉着我去看动画片</h4>
+        <img src="images/us/20240706头脑特工队.JPG" alt="20240706头脑特工队.JPG" width="200"
+             onclick="openModal('images/us/20240706头脑特工队.JPG','我上高中之后看的动画片都是你这个幼稚鬼拉着我看的')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2024年7月28日 本科最后一次见面是打球+吃烤肉</h4>
+        <img src="images/us/20240728出去玩2.JPG" alt="20240728出去玩2.JPG" width="200"
+             onclick="openModal('images/us/20240728出去玩2.JPG','本科一头一尾的活动居然都是打球，怎么不是一种冥冥之中自有天意')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2024年8月26日 Airbnb视频</h4>
+        <img src="images/us/20240826airbnb视频.PNG" alt="20240826airbnb视频.PNG" width="200"
+             onclick="openModal('images/us/20240826airbnb视频.PNG','谁家可怜小女孩来了一个月了还只能住airbnb')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2024年10月30日 cyz过生日于是只好勉强和我视频一下</h4>
+        <img src="images/us/20241030视频.JPG" alt="20241030视频.JPG" width="200"
+             onclick="openModal('images/us/20241030视频.JPG','这世界有那么个人，活在我飞扬的青春~')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2024年11月24日 回忆结束了，沙发上歇会儿</h4>
+        <img src="images/us/20241124逛mit.JPG" alt="20241124逛mit.JPG" width="200"
+             onclick="openModal('images/us/20241124逛mit.JPG','这么大个人可以缩进这么小的沙发也是有点牛的')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>彩蛋×  忘记啥时候的事情了√</h4>
+        <img src="images/us/忘记啥时候出去玩了.jpg" alt="忘记啥时候出去玩了.jpg" width="200"
+             onclick="openModal('images/us/忘记啥时候出去玩了.jpg','就记得去新天地了，就记得这家茶餐厅好吃，后面每次路过都能想起来是和你吃的')"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== 第四部分：线上就是另一个人了 ======== -->
+  <section id="section4" class="section-content hidden">
+    <h2>看完了线下的丑照回忆，是时候看看线上的另一副面孔了</h2>
+    <p>温馨提醒：点图片可以放大并查看dm的评论（也有可能因为太无语所以不想评论了）</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>高中时期 强行聊天1</h4>
+        <img src="images/chat/高中qq聊天.png" alt="images/chat/高中qq聊天.png" width="200"
+             onclick="openModal('images/chat/高中qq聊天.png','现在看我脸皮真的好厚啊，你一直这个回复风格都能和你聊下去')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>高中时期 强行聊天2</h4>
+        <img src="images/chat/高中qq聊天2.PNG" alt="images/chat/高中qq聊天2.PNG" width="200"
+             onclick="openModal('images/chat/高中qq聊天2.PNG','下头男')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2020年10月4日 不能截图不能说出去</h4>
+        <img src="images/chat/20201004不能截图不能说出去.jpg" alt="images/chat/20201004不能截图不能说出去.jpg" width="200"
+             onclick="openModal('images/chat/20201004不能截图不能说出去.jpg','我记得有人想和我打赌羽毛球，一分一声爸爸，现在还作数吗')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2021年6月11日 凯哥给爷爬！</h4>
+        <img src="images/chat/20210611tape.jpg" alt="images/chat/20210611tape.jpg" width="200"
+             onclick="openModal('images/chat/20210611tape.jpg','大毛洗洗睡吧')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2021年6月11日 交复之争</h4>
+        <img src="images/chat/20210725交复.jpg" alt="images/chat/20210611tape.jpg" width="200"
+             onclick="openModal('images/chat/20210725交复.jpg','大毛洗洗睡吧')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2021年6月11日 鸭鸭刷屏大毛不回</h4>
+        <img src="images/chat/20210728不理她.jpg" alt="images/chat/20210728不理她.jpg" width="200"
+             onclick="openModal('images/chat/20210728不理她.jpg','这辈子还会有第二次这种诡异时刻吗？')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2021年9月21日 鸭鸭精神分裂</h4>
+        <img src="images/chat/20210921.png" alt="images/chat/20210921精神分裂.mp4" width="200"
+             onclick="openModal('images/chat/20210921精神分裂.mp4','怎么会有人前一秒')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2021年9月21日 罕见的鸭鸭撒娇（建议你也别听了）</h4>
+        <img src="images/chat/20210921撒娇.jpg" alt="images/chat/20210921撒娇.mp4" width="200"
+             onclick="openModal('images/chat/20210921撒娇.mp4','建议别听是因为真的会鸡皮疙瘩hhh')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2022年1月22日 天生神力赵凯雅</h4>
+        <img src="images/chat/20220122大力怪.jpg" alt="images/chat/20220122大力怪.jpg" width="200"
+             onclick="openModal('images/chat/20220122大力怪.jpg','以前和你扳手腕的时候真有感觉力气大，不愧是外号“凯哥”的班长')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2022年4月21日 鸭鸭超绝夹子音</h4>
+        <img src="images/chat/20220412夹子音.jpg" alt="images/chat/20220412夹子音.mp4" width="200"
+             onclick="openModal('images/chat/20220412夹子音.mp4','')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2023年11月10日 我又不是因为有花才好</h4>
+        <img src="images/chat/20231110夸我.PNG" alt="images/chat/20231110夸我.PNG" width="200"
+             onclick="openModal('images/chat/20231110夸我.PNG','美国是真送不了一点花了，太贵了')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2023年12月29日 精神分裂式晚安</h4>
+        <img src="images/chat/20231229精神分裂式晚安.PNG" alt="images/chat/20231229精神分裂式晚安.PNG" width="200"
+             onclick="openModal('images/chat/20231229精神分裂式晚安.PNG','什么人才能刚发完晚安就发流汗黄豆')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2024年1月1日 新年快乐</h4>
+        <img src="images/chat/20240101新年快乐.JPG" alt="images/chat/20240101新年快乐.JPG" width="200"
+             onclick="openModal('images/chat/20240101新年快乐.JPG','最喜欢的一个新年快乐，总感觉像电影里的人在和我轻柔但真诚的说新年快乐')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2024年1月30日 你真的是我最好的兄弟</h4>
+        <img src="images/chat/20240130发癫.PNG" alt="images/chat/20240130发癫.PNG" width="200"
+             onclick="openModal('images/chat/20240130发癫.PNG','已经忘记自己干了啥导致你直接这样输出，但是这种话真的是很能让人开心的，给了我很多力量')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2024年1月30日 再回我是狗</h4>
+        <img src="images/chat/20240130再回我是狗.JPG" alt="images/chat/20240130再回我是狗.JPG" width="200"
+             onclick="openModal('images/chat/20240130再回我是狗.JPG','已收录至大毛微信表情包')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2024年2月10日 新年快乐</h4>
+        <img src="images/chat/20240210新年快乐.PNG" alt="images/chat/20240210新年快乐.PNG" width="200"
+             onclick="openModal('images/chat/20240210新年快乐.PNG','以后至少可以一年新年快乐一次……吧？')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2024年4月4日 可能是唯一一次不接视频被骂？</h4>
+        <img src="images/chat/20240404不接视频被骂.jpg" alt="images/chat/20240404不接视频被骂.MP4" width="200"
+             onclick="openModal('images/chat/20240404不接视频被骂.MP4','cyz也是好起来了，鸭鸭电话都敢不接了')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>2024年5月9日 义父</h4>
+        <img src="images/chat/20240509义父.JPG" alt="images/chat/20240509义父.JPG" width="200"
+             onclick="openModal('images/chat/20240509义父.JPG','借钱最大方的富婆呜呜呜，拯救了我出去玩没有钱的窘境')"/>
+      </div>
+      <div class="timeline-item">
+        <h4>彩蛋 鸭鸭定制版语音晚安</h4>
+        <img src="images/chat/语音晚安.jpg" alt="images/chat/语音晚安.MP4" width="200"
+             onclick="openModal('images/chat/语音晚安.MP4','鸭鸭定制版晚安，专治失眠')"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== 第五部分：写点啥 ======== -->
+  <section id="section5" class="section-content hidden">
+    <h2>写点啥</h2>
+    <p>收录的信件有限，但是真没想到最一开始居然还是你写给我的（你别得意）</p>
+    <p>温馨提醒：点图片可以放大</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <h4>2021年10月29日 生日贺卡</h4>
+        <img src="images/letters/20211029生日贺卡.jpg" alt="20211029生日贺卡.jpg" width="200"
+             onclick="openModal('images/letters/20211029生日贺卡.jpg','')" />
+      </div>
+      <div class="timeline-item">
+        <h4>2021年末 新年祝福</h4>
+        <img src="images/letters/2021年末新年祝福.jpg" alt="2021年末新年祝福.jpg" width="200"
+             onclick="openModal('images/letters/2021年末新年祝福.jpg','')" />
+      </div>
+      <div class="timeline-item">
+        <h4>2022年 写给我的信</h4>
+        <img src="images/letters/2022信.jpg" alt="2022信.jpg" width="200"
+             onclick="openModal('images/letters/2022信.jpg','')" />
+      </div>
+      <div class="timeline-item">
+        <h4>2023年12月18日 信</h4>
+        <img src="images/letters/20231218信.JPG" alt="20231218信.JPG" width="200"
+             onclick="openModal('images/letters/20231218信.JPG','')" />
+        <img src="images/letters/20231218信2.JPG" alt="20231218信2.JPG" width="200"
+             onclick="openModal('images/letters/20231218信2.JPG','')" />
+        <img src="images/letters/20231218信3.JPG" alt="20231218信3.JPG" width="200"
+             onclick="openModal('images/letters/20231218信3.JPG','')" />
+      </div>
+      <div class="timeline-item">
+        <h4>2024年2月9日 信</h4>
+        <img src="images/letters/20240209信.JPG" alt="20240209信.JPG" width="200"
+             onclick="openModal('images/letters/20240209信.JPG','')" />
+        <img src="images/letters/20240209信2.JPG" alt="20240209信2.JPG" width="200"
+             onclick="openModal('images/letters/20240209信2.JPG','')" />
+      </div>
+      <div class="timeline-item">
+        <h4>2024年2月28日 信</h4>
+        <img src="images/letters/20240228信.JPG" alt="20240228信.JPG" width="200"
+             onclick="openModal('images/letters/20240228信.JPG','')" />
+      </div>
+      <div class="timeline-item">
+        <h4>2024年12月29日 信</h4>
+        <img src="images/letters/20241229信.JPG" alt="20241229信.JPG" width="200"
+             onclick="openModal('images/letters/20241229信.JPG','')" />
+      </div>
+    </div>
+
+    <div class="letters-form">
+      <h3>写一封信（立刻能看见）</h3>
+      <label for="instantMsg">写点啥：</label>
+      <textarea id="instantMsg" rows="4" cols="30"></textarea>
+      <br/>
+      <button class="primary-btn" onclick="saveInstantMsg()">提交</button>
+
+      <div id="instantMsgList" class="letters-list">
+        <!-- 实时显示别人提交的内容（或者自己也行） -->
+      </div>
+    </div>
+
+    <div class="letters-form">
+      <h3>写一封给未来的信</h3>
+      <label for="futureDate">未来的某一天（示例输入2025-12-31）：</label>
+      <input type="date" id="futureDate" />
+      <label for="futureMsg">给未来的你写点啥：</label>
+      <textarea id="futureMsg" rows="4" cols="30"></textarea>
+      <br/>
+      <button class="primary-btn" onclick="saveFutureMsg()">保存到未来信箱</button>
+
+      <div id="futureMsgList" class="letters-list">
+        <!-- 显示保存下来的未来信 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 图片/视频弹窗 Modal ======= -->
+  <div class="modal-overlay" id="photoModal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">X</span>
+      <img id="modalImage" src="" alt="modal photo" style="display:none;" />
+      <video id="modalVideo" controls style="display:none;"></video>
+      <p id="modalComment"></p>
+    </div>
+  </div>
+
+  <!-- 引用外部脚本 -->
+  <script src="script.js"></script>
+</body>
+</html>
